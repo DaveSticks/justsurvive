@@ -136,7 +136,7 @@ function onPlayerUseMedicObject(itemName)
 			setElementData(playersource,itemName,getElementData(playersource,itemName)-1)
 			setElementData(playersource,"Blood Bag (Empty)",getElementData(playersource,"Blood Bag (Empty)")+1)
 		end
-	end,1500,1,playersource)	
+	end,1500,1,playersource,itemName)	
 	triggerClientEvent(playersource,"refreshInventoryManual",playersource)
 end
 addEvent("onPlayerUseMedicObject",true)
