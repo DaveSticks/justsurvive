@@ -107,7 +107,7 @@ addEventHandler("onPlayerRequestChangingStats",getRootElement(),onPlayerRequestC
 function onPlayerUseMedicObject(itemName)
 	local playersource = source
 	setPedAnimation (playersource,"BOMBER","BOM_Plant",5000,false,false,nil,false)
-	setTimer( function ()
+	setTimer( function (playersource)
 		if itemName == "Bandage" then
 			setElementData(playersource,"bleeding",0)
 			setElementData(playersource,itemName,getElementData(playersource,itemName)-1)
@@ -136,7 +136,7 @@ function onPlayerUseMedicObject(itemName)
 			setElementData(playersource,itemName,getElementData(playersource,itemName)-1)
 			setElementData(playersource,"Blood Bag (Empty)",getElementData(playersource,"Blood Bag (Empty)")+1)
 		end
-	end,1500,1)	
+	end,1500,1,playersource)	
 	triggerClientEvent(playersource,"refreshInventoryManual",playersource)
 end
 addEvent("onPlayerUseMedicObject",true)
