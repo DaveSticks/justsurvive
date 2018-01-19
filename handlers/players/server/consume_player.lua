@@ -107,7 +107,7 @@ addEventHandler("onPlayerRequestChangingStats",getRootElement(),onPlayerRequestC
 function onPlayerUseMedicObject(itemName)
 	local playersource = source
 	setPedAnimation (playersource,"BOMBER","BOM_Plant",5000,false,false,nil,false)
-	setTimer( function (playersource)
+	setTimer( function (playersource, itemName)
 		if itemName == "Bandage" then
 			setElementData(playersource,"bleeding",0)
 			setElementData(playersource,itemName,getElementData(playersource,itemName)-1)
