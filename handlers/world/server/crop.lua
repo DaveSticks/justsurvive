@@ -7,7 +7,7 @@
 	Copyright: All rights reserved to developers from this DayZ Gamemode
 ]]
 
-Async:setPriority("normal")
+--Async:setPriority("normal")
 
 local cropTable = {
 	-- // Data base
