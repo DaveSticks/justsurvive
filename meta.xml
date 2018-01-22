@@ -69,6 +69,8 @@
 	<script src="init/server/caching.lua" type="server" />
 
 	<!-- handlers folder -->
+	<script src="handlers/world/client/crop.lua" type="client" cache="false" />
+	<script src="handlers/world/server/crop.lua" type="server" />
 	<script src="handlers/world/client/tree_chop.lua" type="client" cache="false" />
 	<script src="handlers/world/server/tree_chop.lua" type="server" />
 	<script src="handlers/world/server/loot.lua" type="server" />
